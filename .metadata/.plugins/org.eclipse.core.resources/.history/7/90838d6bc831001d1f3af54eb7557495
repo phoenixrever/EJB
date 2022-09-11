@@ -1,0 +1,22 @@
+package com.phoenixhell.ejbserver.impl;
+
+import javax.ejb.Local;
+import javax.ejb.Stateless;
+
+import com.phoenixhell.ejbserver.Other;
+
+/**
+ * 功能  要在FirstBean 里面调用本类的sayOther方法
+ */
+
+
+//默认就是本地 local bean
+@Stateless
+@Local
+public class OtherBean implements Other {
+
+	public String sayOther() {
+		return "say otheer";
+	}
+
+}

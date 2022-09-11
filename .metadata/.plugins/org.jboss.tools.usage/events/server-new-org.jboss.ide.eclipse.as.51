@@ -1,0 +1,11 @@
+#Sun Sep 11 18:11:08 GMT+09:00 2022
+ct=server
+a=new
+c=3
+s=0
+d=1662887468860
+v=3.9.400
+vl=0 \= failed, 1 \= successful
+cmp=server
+cl=org.jboss.ide.eclipse.as.51
+l=Server Runtime ID

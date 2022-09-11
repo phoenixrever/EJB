@@ -1,0 +1,38 @@
+package com.phoenixhell.ejbserver.impl;
+
+import javax.ejb.Local;
+import javax.ejb.Remote;
+import javax.ejb.Stateless;
+import javax.naming.InitialContext;
+import javax.naming.NamingException;
+
+import com.phoenixhell.ejbserver.FirstEjb;
+import com.phoenixhell.ejbserver.FirstEjbLocal;
+import com.phoenixhell.ejbserver.Other;
+
+/**
+ * Session Bean implementation class FirstEjb
+ */
+
+//不写的话默认实现就是本地接口
+@Remote(FirstEjb.class)
+@Local(FirstEjbLocal.class)
+@Stateless
+public class FirstEjbBean implements FirstEjb, FirstEjbLocal {
+
+	public String sayHello(String name) {
+		// 在FirstBean 里面调用本类的sayOther方法
+
+		try {
+			// 使用jndi查找ejb bean
+			InitialContext context = new InitialContext();
+			Other other = (Other) context.lookup("OtherBean/local");
+			return "hello " + name + "------" + other.sayOther();
+
+		} catch (NamingException e) {
+			e.printStackTrace();
+		}
+
+		return "hello " + name ;
+	}
+}

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence xmlns=" http://java.sun.com/xml/ns/persistence"
+    xmlns:xsi=" http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation=" http://java.sun.com/xml/ns/persistence
+     http://java.sun.com/xml/ns/persistence/persistence_1_0.xsd" version="1.0">
+    
+    <!-- 
+    persistence-unit name="EjbXmlMappingsPU" // 持久化单元名
+    transaction-type="JTA(default)/RESOURCE_LOCAL" // 事务类型
+    -->
+<persistence-unit name="EjbXmlMappingsPU" transaction-type="JTA">
+   <description></description> <!-- 描述 -->
+   <provider>oracle.toplink.essentials.PersistenceProvider</provider> <!-- 指定一个持久化提供者 -->
+   <jta-data-source>jdbc/MyDataSource</jta-data-source> <!-- 指定JTA数据源 -->
+   <non-jta-data-source>jdbc/NonTxMyDataSource</non-jta-data-source> <!-- 指定非JTA数据源 -->
+   <mapping-file>META-INF/my_queries.xml</mapping-file> <!-- 指定映射文件 -->
+   <mapping-file>META-INF/my_entities.xml</mapping-file>
+   <jar-file>my/my-classes.jar</jar-file> <!-- 指定托管类的附加JAR -->
+   <class>myclass1</class> <!-- 明确列出的类 -->
+   <class>myclass2</class>
+   <exclude-unlisted-classes/> <!-- 使本地类不能被加到持久化单元中 -->
+   <properties> <!-- 使用提供者属性 -->
+    <property name="toplink.logging.level" value="FINE"/>
+    <property name="toplink.cache.size.dafault" value="500"/>
+   </properties>
+</persistence-unit>
+
+</persistence>

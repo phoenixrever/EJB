@@ -1,0 +1,38 @@
+package com.phoenixhell.ejbcleint;
+
+import java.io.BufferedReader;
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.Properties;
+
+import javax.naming.InitialContext;
+import javax.naming.NamingException;
+
+import com.phoenixhell.ejbServer.FirstEjb;
+
+public class FirstEjbCleint {
+	public static void main(String[] args) throws Exception {
+		// new InitialContext 时候需要通过配置文件告诉EJB 在哪里 通过JNDI
+		// 查找到服务器（应该
+		Properties props;
+		InitialContext context = null;
+		{
+			props = new Properties();
+			try {
+				props.load(new FileInputStream("././jndi.properties"));
+			} catch (IOException ex) {
+				ex.printStackTrace();
+			}
+			try {
+				context = new InitialContext(props);
+			} catch (NamingException ex) {
+				ex.printStackTrace();
+			}
+		}
+
+		FirstEjb firstEjb = (FirstEjb) context.lookup("FirstEjbBean/remote");
+		String name = firstEjb.sayHello("shadow silent");
+		System.out.println(name);
+	}
+}

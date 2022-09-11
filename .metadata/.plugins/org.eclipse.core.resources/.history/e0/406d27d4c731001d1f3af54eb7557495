@@ -1,0 +1,27 @@
+package com.phoenixhell.ejbserver.impl;
+
+
+import javax.ejb.Local;
+import javax.ejb.Remote;
+import javax.ejb.Stateless;
+
+import com.phoenixhell.ejbserver.FirstEjb;
+import com.phoenixhell.ejbserver.FirstEjbLocal;
+
+/**
+ * Session Bean implementation class FirstEjb
+ */
+
+//不写的话默认实现就是本地接口
+@Remote(FirstEjb.class)
+@Local(FirstEjbLocal.class)
+@Stateless
+public class FirstEjbBean implements FirstEjb,FirstEjbLocal{
+
+	public String sayHello(String name) {
+		// TODO Auto-generated method stub
+		return "hello "+name;
+	}
+
+
+}

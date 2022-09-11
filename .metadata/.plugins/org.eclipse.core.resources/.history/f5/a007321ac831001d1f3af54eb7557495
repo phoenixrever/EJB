@@ -1,0 +1,15 @@
+package com.phoenixhell.ejbserver.impl;
+
+import javax.ejb.Stateless;
+
+import com.phoenixhell.ejbserver.Other;
+
+//默认就是本地 local bean
+@Stateless
+public class OtherBean implements Other {
+
+	public String sayOther() {
+		return "say otheer";
+	}
+
+}

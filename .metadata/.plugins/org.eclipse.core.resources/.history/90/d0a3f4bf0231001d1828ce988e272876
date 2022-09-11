@@ -1,0 +1,17 @@
+package com.phoenixhell.ejbcleint;
+
+import javax.naming.InitialContext;
+import javax.naming.NamingException;
+
+import com.phoenixhell.ejbServer.FirstEjb;
+
+public class FirstEjbCleint {
+	public static void main(String[] args) throws NamingException {
+		//new InitialContext 时候需要通过配置文件告诉EJB 在哪里  通过JNDI
+		//查找到服务器（应该？）
+		InitialContext context = new   InitialContext();
+		FirstEjb firstEjb =(FirstEjb)context.lookup("FirstEjbBea/remote");
+		String name = firstEjb.sayHello("shadow silent");
+		System.out.println(name);
+	}
+}

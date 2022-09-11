@@ -1,0 +1,6 @@
+package com.phoenixhell.ejbcleint;
+
+public interface FirstEjb {
+
+	String sayHello(String name);
+}

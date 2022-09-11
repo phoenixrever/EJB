@@ -1,0 +1,21 @@
+package com.phoenixhell.ejbserver;
+
+import javax.ejb.Remote;
+import javax.ejb.Stateless;
+
+import org.jboss.ejb3.annotation.RemoteBinding;
+
+/**
+ * Session Bean implementation class FirstEjb
+ */
+@Remote(FirstEjb.class)
+@RemoteBinding(jndiBinding = "FirstEjbBean/remote")
+public class FirstEjbBean implements FirstEjb {
+
+	public String sayHello(String name) {
+		// TODO Auto-generated method stub
+		return "hello "+name;
+	}
+
+
+}

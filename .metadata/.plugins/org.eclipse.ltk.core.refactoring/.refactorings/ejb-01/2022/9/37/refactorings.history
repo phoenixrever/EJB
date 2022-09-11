@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring accessors="true" comment="Delete element from project &apos;ejb-01&apos;&#x0D;&#x0A;- Original project: &apos;ejb-01&apos;&#x0D;&#x0A;- Original element: &apos;ejb-01/src/com.phoenixhell&apos;&#x0D;&#x0A;- Delete subpackages" description="Delete element" element1="/src&lt;com.phoenixhell.ejb" element2="/src&lt;com.phoenixhell" element3="/src&lt;com" elements="3" flags="589830" id="org.eclipse.jdt.ui.delete" resources="0" stamp="1662554344543" subPackages="true" version="1.0"/>
+</session>

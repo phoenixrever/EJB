@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<list key="MRU_RUNTIME_STORE">
+		<item value="JBoss 5.1 Runtime"/>
+		<item value="WildFly 15.0 Runtime"/>
+		<item value="JBoss 7.1 Runtime"/>
+		<item value="NULL_RUNTIME"/>
+		<item value="Apache Tomcat v8.5"/>
+	</list>
+</section>

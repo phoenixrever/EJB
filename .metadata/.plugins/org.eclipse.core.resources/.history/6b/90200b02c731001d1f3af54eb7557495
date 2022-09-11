@@ -1,0 +1,5 @@
+package com.phoenixhell.ejbserver.impl;
+
+public class OtherBean {
+
+}

@@ -1,0 +1,5 @@
+package com.phoenixhell.service;
+
+public interface PersonService {
+
+}

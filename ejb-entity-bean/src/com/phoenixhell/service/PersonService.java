@@ -1,8 +1,10 @@
 package com.phoenixhell.service;
 
+import java.util.List;
+
 import com.phoenixhell.person.Person;
 
-import antlr.collections.List;
+
 
 public interface PersonService {
 	public void save(Person person);
@@ -10,5 +12,4 @@ public interface PersonService {
 	public void delete(Integer id);
 	public Person getPerson(Integer id);
 	public List<Person> getPersons();
-
 }

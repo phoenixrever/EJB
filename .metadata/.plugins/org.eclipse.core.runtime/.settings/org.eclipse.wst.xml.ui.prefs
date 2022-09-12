@@ -1,6 +1,25 @@
 autoProposeCode=<\=\:abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ 
+cdataBorder=\#a7ec21 | null | false | false | false | false
+cdataText=\#93bde8 | null | false | false | false | false
+commentBorder=\#4c5067 | null | false | false | false | false
+commentText=\#4c5067 | null | false | false | false | false
+declBorder=\#a7ec21 | null | false | false | false | false
+doctypeExternalId=\#cf96eb | null | false | false | false | false
+doctypeExternalPubref=\#f0a253 | null | false | false | false | false
+doctypeExtrenalSysref=\#fbd153 | null | false | false | false | false
+doctypeName=\#a7ec21 | null | false | false | false | false
 eclipse.preferences.version=1
+entityReference=\#cd255f | null | false | false | false | false
 newFileTemplateName=xml declaration
 org.eclipse.wst.xml.ui.internal.tabletree.XMLMultiPageEditorPart.lastActivePage=1
+overriddenByCSS=,cdataBorder,cdataText,commentBorder,commentText,declBorder,doctypeExternalId,doctypeExternalPubref,doctypeExtrenalSysref,doctypeName,entityReference,piBorder,piContent,tagAttributeEquals,tagAttributeName,tagAttributeValue,tagBorder,tagName,xmlContent,
+piBorder=\#0289b0 | null | false | false | false | false
+piContent=\#e2e3e9 | null | false | false | false | false
+tagAttributeEquals=\#4cbb0f | null | false | false | false | false
+tagAttributeName=\#a7ec21 | null | false | false | false | false
+tagAttributeValue=\#15b789 | null | false | true | false | false
+tagBorder=\#6c7293 | null | false | false | false | false
+tagName=\#03a8d8 | null | true | false | false | false
+xmlContent=\#e2e3e9 | null | false | false | false | false
 xml_content_assist_default_page_sort_order=org.eclipse.wst.xml.ui.proposalCategory.xmlTags\u0000org.eclipse.wst.xml.ui.proposalCategory.xmlTemplates\u0000
 xml_content_assist_own_page_sort_order=org.eclipse.wst.xml.ui.proposalCategory.xmlTemplates\u0000org.eclipse.wst.xml.ui.proposalCategory.xmlTags\u0000

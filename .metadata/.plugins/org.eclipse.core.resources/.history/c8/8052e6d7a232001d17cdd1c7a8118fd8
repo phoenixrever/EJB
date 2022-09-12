@@ -1,0 +1,57 @@
+package com.phoenixhell.service;
+
+import java.util.List;
+
+import javax.ejb.Remote;
+import javax.ejb.Stateless;
+import javax.persistence.EntityManager;
+import javax.persistence.PersistenceContext;
+
+import com.phoenixhell.person.Person;
+
+
+@Stateless
+@Remote(PersonService.class)
+public class PersonServiceBean implements PersonService {
+	//注入EntityManager 对象 name属性是persistence-unit name 
+	@PersistenceContext(name = "MySqlDS")
+	private EntityManager entityManager;
+	
+	
+	//第二个参数就是标注了@Id 的属性值
+	public Person getPerson(Integer id) {
+		
+		//没有找到会返回null
+		Person  person = (Person) entityManager.find(PersonService.class, id);
+
+		return person;
+	}
+
+
+
+	public List<Person> getPersons() {
+		//这是一条面向对象的语句 不是sql语句  
+		//Person 是@Entity注解的name 属性指定的值 如果没有指定 默认是类名
+		//Person 是大小写区分的
+		entityManager.createQuery("select o from Person o");
+		return null;
+	}
+	
+	
+	public void save(Person person) {
+
+	}
+
+	public void update(Person person) {
+		// TODO Auto-generated method stub
+
+	}
+
+	public void delete(Integer id) {
+		// TODO Auto-generated method stub
+
+	}
+
+
+
+}

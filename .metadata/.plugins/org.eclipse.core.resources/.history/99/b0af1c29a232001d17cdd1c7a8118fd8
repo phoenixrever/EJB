@@ -1,0 +1,48 @@
+package com.phoenixhell.service;
+
+import java.util.List;
+
+import javax.ejb.Remote;
+import javax.ejb.Stateless;
+import javax.persistence.EntityManager;
+import javax.persistence.PersistenceContext;
+
+import com.phoenixhell.person.Person;
+
+
+@Stateless
+@Remote(PersonService.class)
+public class PersonServiceBean implements PersonService {
+	//注入EntityManager 对象 name属性是persistence-unit name 
+	@PersistenceContext(name = "MySqlDS")
+	private EntityManager entityManager;
+	
+	
+	public Person getPerson(Integer id) {
+		entityManager.find(PersonService.class, person.getId())
+
+		return null;
+	}
+
+	public void save(Person person) {
+
+	}
+
+	public void update(Person person) {
+		// TODO Auto-generated method stub
+
+	}
+
+	public void delete(Integer id) {
+		// TODO Auto-generated method stub
+
+	}
+
+
+
+	public List<Person> getPersons() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

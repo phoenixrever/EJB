@@ -1,0 +1,15 @@
+codeStyleNormal=\#F8F8F2 | \#282A36 | null | null | null | null
+eclipse.preferences.version=1
+editorBlocknameColor=\#FF79C6 | \#282A36 | false | null | null | null
+editorColorBoundarymaker=\#F8F8F2 | \#282A36 | null | null | null | null
+editorColorComment=\#6272A4 | \#282A36 | null | false | null | null
+editorColorHeredoc=\#6272A4 | \#282A36 | null | false | null | null
+editorColorKeyword=\#FF79C6 | \#282A36 | false | null | null | null
+editorColorLineComment=\#6272A4 | \#282A36 | null | false | null | null
+editorColorNumber=\#FF79C6 | \#282A36 | null | null | null | null
+editorColorPHPDocComment=\#6272A4 | \#282A36 | null | false | null | null
+editorColorPhpdoc=\#6272A4 | \#282A36 | null | false | null | null
+editorColorString=\#F1FA8C | \#282A36 | null | null | null | null
+editorColorTask=\#8BE9FD | \#282A36 | null | false | false | true
+editorColorVariable=\#F8F8F2 | \#282A36 | null | null | null | null
+editorStmtColorBoundarymaker=\#F8F8F2 | \#282A36 | null | null | null | null

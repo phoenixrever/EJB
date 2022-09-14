@@ -1,0 +1,17 @@
+package com.phoenixhell.test;
+
+import javax.naming.InitialContext;
+
+import com.phoenixhell.ejbserver.FirstEjb;
+import com.phoenixhell.service.PersonService;
+
+public class PersonTest {
+	public static void main(String[] args) {
+		//使用配置文件查找
+		InitialContext context = new InitialContext();
+		PersonService personService = (PersonService)context.lookup("PersonServiceBean/remote");
+		String name = firstEjb.sayHello("shadow silent remote");
+		System.out.println(name);
+	}
+
+}

@@ -6,7 +6,7 @@ org.jboss.ide.eclipse.as.ui.preferences.runtime.last.type.org.jboss.ide.eclipse.
 org.jboss.ide.eclipse.as.ui.preferences.runtime.last.type.org.jboss.ide.eclipse.as.runtime.60=D\:\\application\\jboss-6.0.0.Final
 org.jboss.ide.eclipse.as.ui.preferences.runtime.last.type.org.jboss.ide.eclipse.as.runtime.71=D\:\\application\\jboss-as-7.1.1.Final
 org.jboss.ide.eclipse.as.ui.preferences.runtime.last.type.org.jboss.ide.eclipse.as.runtime.wildfly.150=D\:\\application\\wildfly-15.0.0.Final
-org.jboss.ide.eclipse.as.ui.wizards.LAST_RUNTIME_CREATED=JBoss 6.x Runtime
-org.jboss.ide.eclipse.as.ui.wizards.LAST_RUNTIME_TYPE_CREATED=org.jboss.ide.eclipse.as.runtime.60
+org.jboss.ide.eclipse.as.ui.wizards.LAST_RUNTIME_CREATED=JBoss 7.1 Runtime
+org.jboss.ide.eclipse.as.ui.wizards.LAST_RUNTIME_TYPE_CREATED=org.jboss.ide.eclipse.as.runtime.71
 org.jboss.ide.eclipse.as.ui.wizards.LAST_SERVER_CREATED=JBoss AS 5.1
 org.jboss.ide.eclipse.as.ui.wizards.LAST_SERVER_TYPE_CREATED=org.jboss.ide.eclipse.as.51

@@ -1,0 +1,28 @@
+package com.phoenixhell.test;
+
+import java.util.Hashtable;
+import java.util.List;
+
+import javax.naming.Context;
+import javax.naming.InitialContext;
+import javax.naming.NamingException;
+
+import com.phoenixhell.person.Person;
+import com.phoenixhell.service.PersonService;
+import java.util.Properties;
+
+
+public class PersonTest {
+	public static void main(String[] args) throws NamingException {
+        Properties jndiProps = new Properties();
+        jndiProps.setProperty(Context.INITIAL_CONTEXT_FACTORY, "org.jnp.interfaces.NamingContextFactory");
+        jndiProps.setProperty(Context.URL_PKG_PREFIXES, "org.jboss.ejb.client.naming");
+        jndiProps.setProperty(Context.PROVIDER_URL, "127.0.0.1:4447");
+
+        InitialContext 	 = new InitialContext(jndiProps);
+		PersonService personService = (PersonService)context.lookup("ejb:ejb-entity-bean/PersonServiceBean!com.phoenixhell.service.PersonService");
+		List<Person> list =  personService.getPersons();
+		System.out.println(list);
+	}
+
+}

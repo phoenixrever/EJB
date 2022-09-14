@@ -1,0 +1,26 @@
+package com.phoenixhell.test;
+
+import java.util.List;
+
+import javax.naming.InitialContext;
+import javax.naming.NamingException;
+
+import com.phoenixhell.person.Person;
+import com.phoenixhell.service.PersonService;
+import java.util.Properties;
+
+
+public class PersonTest {
+	public static void main(String[] args) throws NamingException {
+//		Properties props = new Properties();
+//		props.setProperty("java.naming.factory.initial", "org.jnp.interfaces.NamingContextFactory");
+//		props.setProperty("java.naming.factory.url.pkgs","org.jboss.naming:org.jnp.interfaces");
+//		props.setProperty("java.naming.provider.url", "localhost:1099");
+		//使用配置文件查找
+		InitialContext context = new InitialContext();
+		PersonService personService = (PersonService)context.lookup("PersonServiceBean/remote");
+		List<Person> list =  personService.getPersons();
+		System.out.println(list);
+	}
+
+}

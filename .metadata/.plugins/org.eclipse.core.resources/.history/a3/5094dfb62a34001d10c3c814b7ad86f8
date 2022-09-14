@@ -1,0 +1,26 @@
+package com.phoenixhell.test;
+
+import java.util.Hashtable;
+import java.util.List;
+
+import javax.naming.Context;
+import javax.naming.InitialContext;
+import javax.naming.NamingException;
+
+import com.phoenixhell.person.Person;
+import com.phoenixhell.service.PersonService;
+import java.util.Properties;
+
+
+public class PersonTest {
+	public static void main(String[] args) throws NamingException {
+		final Hashtable<String, String> jndiProperties = new Hashtable();
+        jndiProperties.put(Context.URL_PKG_PREFIXES, "org.jboss.ejb.client.naming");
+        final Context context = new InitialContext(jndiProperties);
+        // let's do the lookup (notice the ?stateful string as the last part of the jndi name for stateful bean lookup)
+		PersonService personService = (PersonService)context.lookup("ejb-entity-bean/PersonServiceBean!com.phoenixhell.service.PersonService");
+		List<Person> list =  personService.getPersons();
+		System.out.println(list);
+	}
+
+}

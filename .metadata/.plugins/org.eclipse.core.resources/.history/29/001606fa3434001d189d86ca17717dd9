@@ -1,0 +1,30 @@
+package com.phoenixhell.test;
+
+import java.util.Hashtable;
+import java.util.List;
+
+import javax.naming.Context;
+import javax.naming.InitialContext;
+import javax.naming.NamingException;
+
+import com.phoenixhell.person.Person;
+import com.phoenixhell.service.PersonService;
+import java.util.Properties;
+
+
+public class PersonTest {
+	public static void main(String[] args) throws NamingException {
+		 Properties props = new Properties();
+         props.put(Context.INITIAL_CONTEXT_FACTORY, "org.jboss.naming.remote.client.InitialContextFactory");
+         props.put(Context.PROVIDER_URL, "remote://localhost:4447"); 
+         props.put(Context.SECURITY_PRINCIPAL, "shadow");
+         props.put(Context.SECURITY_CREDENTIALS, "123456");
+          
+         Context context = new InitialContext(props);
+        // let's do the lookup (notice the ?stateful string as the last part of the jndi name for stateful bean lookup)
+		PersonService personService = (PersonService)context.lookup("ejb:ejb-entity-bean/PersonServiceBean!com.phoenixhell.service.PersonService");
+		List<Person> list =  personService.getPersons();
+		System.out.println(list);
+	}
+
+}

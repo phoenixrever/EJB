@@ -1,0 +1,22 @@
+package com.phoenixhell.test;
+
+import java.util.List;
+
+import javax.naming.InitialContext;
+import javax.naming.NamingException;
+
+import com.phoenixhell.person.Person;
+import com.phoenixhell.service.PersonService;
+
+
+
+public class PersonTest {
+	public static void main(String[] args) throws NamingException {
+		//使用配置文件查找
+		InitialContext context = new InitialContext();
+		PersonService personService = (PersonService)context.lookup("PersonServiceBean/remote");
+		List<Person> list =  personService.getPersons();
+		System.out.println(list);
+	}
+
+}

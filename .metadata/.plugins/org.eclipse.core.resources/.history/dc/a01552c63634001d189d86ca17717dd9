@@ -1,0 +1,41 @@
+package com.phoenixhell.test;
+
+import java.util.Hashtable;
+import java.util.List;
+
+import javax.naming.Context;
+import javax.naming.InitialContext;
+import javax.naming.NamingException;
+
+import com.phoenixhell.person.Person;
+import com.phoenixhell.service.PersonService;
+import java.util.Properties;
+
+
+public class PersonTest {
+	public static void main(String[] args) throws NamingException {
+		 Properties props = new Properties();
+         props.put(Context.INITIAL_CONTEXT_FACTORY, "org.jboss.naming.remote.client.InitialContextFactory");
+         props.put(Context.PROVIDER_URL, "remote://localhost:4447"); 
+         props.put(Context.SECURITY_PRINCIPAL, "shadow");
+         props.put(Context.SECURITY_CREDENTIALS, "123456");
+          
+         Context context = new InitialContext(props);
+         
+         final String appName = "";//这是应用名，即打包的后缀是.ear ，如果不是发布的这个类型，为空
+         final String moduleName = "ejb-entity-bean";//发布在JBoss中的为.jar的包名
+         final String distinctName = "";//JBoss as7允许每个部署有一个不同的名称(别名吧，可选)，这里我没有设置
+         final String beanName = "PersonServiceBean";//无状态会话bean接口的一个实现类
+         final String viewClassName = PersonService.class.getName();//无状态会话bean接口的全路径:cn.mym.first.HelloWorld
+         
+         //最后拼接成lookup函数可识别的JNDI："ejb:appName/moduleName/distinctName/beanName!viewClassName";
+         String jndi = "ejb:" + appName + "/" + moduleName + "/" +
+         		+ beanName + "!" + viewClassName;
+
+        // let's do the lookup (notice the ?stateful string as the last part of the jndi name for stateful bean lookup)
+		PersonService personService = (PersonService)context.lookup(jndi);
+		List<Person> list =  personService.getPersons();
+		System.out.println(list);
+	}
+
+}

@@ -1,8 +1,0 @@
-package com.phoenixhell.ejbserver;
-
-import javax.ejb.Remote;
-
-@Remote
-public interface FirstEjb {
-
-}

@@ -1,9 +1,0 @@
-package com.phoenixhell.ejbserver;
-
-import javax.ejb.Remote;
-import javax.ejb.Stateless;
-
-
-public interface FirstEjbBean {
-
-}

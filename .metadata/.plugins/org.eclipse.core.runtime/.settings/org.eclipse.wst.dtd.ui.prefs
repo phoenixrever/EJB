@@ -1,9 +1,9 @@
-dtdComment=\#6272A4 | \#282A36 | null | false | null | null
-dtdData=\#F8F8F2 | \#282A36 | null | null | null | null
-dtdDefault=\#F8F8F2 | \#282A36 | null | null | null | null
-dtdKeyword=\#FF79C6 | \#282A36 | false | null | null | null
-dtdString=\#F1FA8C | \#282A36 | null | null | null | null
-dtdSymbol=\#F8F8F2 | \#282A36 | null | null | null | null
-dtdTag=\#FF79C6 | \#282A36 | null | null | null | null
-dtdTagName=\#FF79C6 | \#282A36 | null | null | null | null
+dtdComment=\#334466 | \#FFFFFF | null | null | null | null
+dtdData=\#000000 | \#FFFFFF | null | null | null | null
+dtdDefault=\#000000 | \#FFFFFF | null | null | null | null
+dtdKeyword=\#5C8198 | \#FFFFFF | null | null | null | null
+dtdString=\#333333 | \#FFFFFF | null | null | null | null
+dtdSymbol=\#566874 | \#FFFFFF | null | null | null | null
+dtdTag=\#5C8198 | \#FFFFFF | null | null | null | null
+dtdTagName=\#5C8198 | \#FFFFFF | null | null | null | null
 eclipse.preferences.version=1
